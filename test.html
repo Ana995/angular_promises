@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="app_promise">
+ <div ng-controller="PromiseCtrl">
+     <button ng-click="mini_test()">$http call Test</button>
+     <div>
+         <h1>{{self.first}}</h1>
+     </div>
+     <p>Combined Result: {{combinedNestedResult}}</p>
+     <h2>$q.getData Test</h2>
+     <button ng-click="getData()"></button>
+     <p>Combined Result: {{combineResult}}</p>
+     <div id="list2" ng-repeat="item in second">
+         <h2>{{item.login}}</h2>
+     </div>
+     <h3>Deferred Timer Test</h3>
+     <input type="checkbox" ng-model="success" ng-checked="success"> Toggle Success/Failure
+     <button ng-click="startDeferredTime(success)">Start Test</button>
+     <p>Rezultat: {{startDeferredTimerResult}}</p>
+
+ </div>
+
+</body>
+<script src="lib/angular/angular.min.js"></script>
+<script src="js/js/getData.js"></script>
+<!--<script src="js/js/simple_promise.js"></script>-->
+</html>
